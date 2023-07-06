@@ -1,44 +1,66 @@
-import { BsFillPlusCircleFill, BsSearch, BsWhatsapp } from "react-icons/bs";
+import { BsFillPlusCircleFill, BsHandbag, BsSearch, BsWhatsapp } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io";
-import { IoSettings } from "react-icons/io5";
+import { IoSettings, IoStatsChart, IoStorefrontSharp } from "react-icons/io5";
 import InnerContent from "./InnerContent";
-import { AiOutlineRight } from "react-icons/ai";
+import { AiFillBank, AiFillHome, AiOutlineRight } from "react-icons/ai";
+import Option from "./Option";
+import { FaCartPlus, FaPlus, FaRegNoteSticky, FaShapes, FaUsers, FaWallet } from "react-icons/fa6";
+import { FaHome } from "react-icons/fa";
 const Dashboard = () => {
-    const hideModal = () => {
-        return true;
-    }
+
     const navItems = <>
-        <li >
-        </li>
-        <li><a>Navbar Item 2</a></li>
+
+
+        <Option text='Home' icon={AiFillHome}></Option>
+        <Option text='Parties' icon={FaUsers} icon2={FaPlus}></Option>
+        
+        
         <div className="join join-vertical w-full">
-            <div className="collapse collapse-arrow join-item border border-base-300">
-                <input type="radio" name="my-accordion-4" checked="checked" />
-                <div className="collapse-title text-xl font-medium">
-                    Click to open this one and close others
-                </div>
-                <div className="collapse-content">
-                    <p>hello</p>
-                </div>
+            <div className="collapse collapse-arrow hover:bg-teal-700">
+                <input type="radio" name="my-accordion-4" className="p-0"/>
+                <div className="collapse-title p-0">
+                <Option text='Sale' icon={FaRegNoteSticky}></Option>
             </div>
-            <div className="collapse collapse-arrow join-item border border-base-300">
-                <input type="radio" name="my-accordion-4" />
-                <div className="collapse-title text-xl font-medium">
-                    Click to open this one and close others
-                </div>
-                <div className="collapse-content">
-                    <p>hello</p>
-                </div>
+            <div className="collapse-content">
+                <Option text='option 1' icon2={FaPlus}></Option>
+                <Option text='option 2' icon2={FaPlus}></Option>
             </div>
-            <div className="collapse collapse-arrow join-item border border-base-300">
-                <input type="radio" name="my-accordion-4" />
-                <div className="collapse-title text-xl font-medium">
-                    Click to open this one and close others
-                </div>
-                <div className="collapse-content">
-                    <p>hello</p>
-                </div>
             </div>
+            <div className="collapse collapse-arrow hover:bg-teal-700">
+                <input type="radio" name="my-accordion-4" className="p-0"/>
+                <div className="collapse-title p-0">
+                <Option text='Purchase' icon={FaCartPlus}></Option>
+            </div>
+            <div className="collapse-content">
+                <Option text='option 1' icon2={FaPlus}></Option>
+                <Option text='option 2' icon2={FaPlus}></Option>
+            </div>
+            </div>
+        </div>
+
+        <Option text='Expences' icon={FaWallet}></Option>
+
+        <div className="join join-vertical w-full">
+            <div className="collapse collapse-arrow hover:bg-teal-700">
+                <input type="radio" name="my-accordion-4" checked="checked " className="p-0"/>
+                <div className="collapse-title p-0">
+                <Option text='Cash & Bank' icon={AiFillBank}></Option>
+            </div>
+            <div className="collapse-content">
+                <Option text='Bank Account' icon2={FaPlus}></Option>
+                <Option text='Cash in hand' icon2={FaPlus}></Option>
+                <Option text='Checks' icon2={FaPlus}></Option>
+                <Option text='Loan Accounts' icon2={FaPlus}></Option>
+            </div>
+            </div>
+        </div>
+
+        <Option text='My online store' icon={IoStorefrontSharp}></Option>
+        <Option text='My report' icon={IoStatsChart}></Option>
+        <div className="w-full h-[2px] bg-slate-500/50 my-2 drop-shadow-sm"></div>
+        <div className="flex items-center">
+        <Option text='Apply for loan' icon={BsHandbag}></Option>
+        <div className="indicator-item badge bg-red-600 text-white">New</div>
         </div>
     </>
     return (
@@ -80,18 +102,17 @@ const Dashboard = () => {
                 {/* Page content here */}
                 <InnerContent />
             </div>
-            <div className="drawer-side ">
+            <div className="drawer-side">
                 <label htmlFor="my-drawer-3" className="drawer-overlay"></label>
-
-                <ul className="menu p-4 w-80 h-full bg-teal-950 text-white">
-                    <div className="flex justify-between items-center">
+                <div className="menu p-4 w-80 bg-teal-950 text-white">
+                    <div className="flex gap-2 items-center">
                         <button className="btn btn-circle bg-blue-500">
                             <img src="home.png" alt="" />
                             <div className="indicator-item badge bg-white h-3 w-3 relative left-5 bottom-4"><p>+</p></div>
                         </button>
-                        <p className="text-2xl font-bold truncate ...">Machinary and Parts</p>
+                        <p className="text-xl font-bold truncate ...">Machinary and Parts</p>
 
-                        <AiOutlineRight className='block text-2xl'></AiOutlineRight>
+                        <AiOutlineRight className='block text-xl'></AiOutlineRight>
                     </div>
 
                     <div className="bg-green-900 rounded m-3 flex p-2">
@@ -103,9 +124,11 @@ const Dashboard = () => {
                         <button type="submit" className="btn btn-sm btn-circle btn-ghost">✕</button>
 
                     </div>
-                    {navItems}
+                    <div className="text-slate-200 font-medium">
+                        {navItems}
+                    </div>
 
-                </ul>
+                </div>
 
             </div>
         </div >
