@@ -2,6 +2,8 @@ import { FaSquarePhone } from 'react-icons/fa6';
 import { AiOutlineDown, AiOutlineRight } from "react-icons/ai";
 import { BsArrowUp, BsPlus, BsSearch, BsThreeDotsVertical } from 'react-icons/bs';
 import { BiFilterAlt } from "react-icons/bi";
+import { TbHomePlus } from "react-icons/tb";
+
 const InnerContent = () => {
     return (
         <div className="w-full h-full bg-slate-200 overflow-auto">
@@ -59,11 +61,13 @@ const InnerContent = () => {
                     </div>
                 </div>
 
-                {/* div right 1 */}
+                {/* div right up */}
                 <div className="col-start-2 col-span-3 bg-white h-full shadow-md drop-shadow-lg">
-
+                <div>
+                ---------------------------------
                 </div>
-                {/* div right 2 */}
+                </div>
+                {/* div right down */}
                 <div className="col-start-2 col-span-3 row-span-2 bg-white h-full shadow-md drop-shadow-lg ">kkkk</div>
             </div>
         </div>
