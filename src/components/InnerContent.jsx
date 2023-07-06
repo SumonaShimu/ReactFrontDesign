@@ -6,9 +6,9 @@ import { BiAlarm, BiFilterAlt, BiSearchAlt } from "react-icons/bi";
 
 const InnerContent = () => {
     return (
-        <div className="w-full h-full bg-slate-200 overflow-auto">
+        <div className="w-full h-full bg-slate-200 lg:overflow-hidden">
             <h1 className="bg-slate-100 py-2 border-slate-300 text-center drop-shadow-lg">NAME</h1>
-            <div className="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-3 gap-3 w-full min-h-max lg:h-full p-3 ">
+            <div className="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-3 gap-3 w-full lg:h-full p-3 ">
                 {/* div left------------------------------------------------ */}
                 <div className="lg:col-start-1 lg:row-span-3 bg-white h-full w-full shadow-md drop-shadow-lg p-2">
                     <div className="flex gap-3 items-center p-4 border rounded-lg ">
