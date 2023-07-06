@@ -1,16 +1,16 @@
 import { FaMessage, FaSquarePhone, FaWhatsapp } from 'react-icons/fa6';
 import { AiOutlineArrowDown, AiOutlineDown, AiOutlineEdit, AiOutlineMail, AiOutlineRight } from "react-icons/ai";
-import { BsArrowUp, BsCurrencyRupee, BsPlus, BsSearch, BsThreeDots, BsThreeDotsVertical } from 'react-icons/bs';
-import { BiAlarm, BiArrowToBottom, BiFilterAlt, BiSearchAlt } from "react-icons/bi";
+import { BsArrowUp, BsCurrencyRupee, BsPlus, BsSearch, BsThreeDotsVertical } from 'react-icons/bs';
+import { BiAlarm, BiFilterAlt, BiSearchAlt } from "react-icons/bi";
 
 
 const InnerContent = () => {
     return (
-        <div className="w-full h-full bg-slate-200 overflow-auto">
+        <div className="w-full bg-slate-200 overflow-auto min-h-[100vh]">
             <h1 className="bg-slate-100 py-2 border-slate-300 text-center drop-shadow-lg">NAME</h1>
-            <div className="p-3 grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-3 gap-3 w-full h-full">
-                {/* div left */}
-                <div className="lg:col-start-1 lg:row-span-3 bg-white lg:h-full shadow-md drop-shadow-lg p-2">
+            <div className="grid grid-cols-1 lg:grid-cols-4 lg:grid-rows-3 gap-3 w-full h-full p-3 ">
+                {/* div left------------------------------------------------ */}
+                <div className="lg:col-start-1 lg:row-span-3 bg-white h-full w-full shadow-md drop-shadow-lg p-2">
                     <div className="flex gap-3 items-center p-4 border rounded-lg ">
                         <div className='bg-red-100 rounded-full flex items-center p-2'>
                             <FaSquarePhone className='text-red-500 text-lg block'></FaSquarePhone>
@@ -34,8 +34,8 @@ const InnerContent = () => {
                         </div>
                     </div>
 
-                    <div className="max-w-screen">
-                        <table className="table overflow-x-scroll">
+                    <div className="max-w-full lg:w-full overflow-x-hidden">
+                        <table className="table lg:w-full">
                             {/* head */}
                             <thead className='uppercase text-base'>
                                 <tr>
@@ -53,7 +53,7 @@ const InnerContent = () => {
                                 <tr className=''>
 
                                     <td>KPS Shanhuala</td>
-                                    <td className='text-green-500'>23600.00</td>
+                                    <td className='text-green-500'>2,360.00</td>
                                     <td><BsThreeDotsVertical /></td>
                                 </tr>
                             </tbody>
@@ -61,8 +61,8 @@ const InnerContent = () => {
                     </div>
                 </div>
 
-                {/* div right up */}
-                <div className="lg:col-start-2 lg:col-span-3 bg-white lg:h-full shadow-md drop-shadow-lg p-2">
+                {/* div right up ---------------------------------------------------*/}
+                <div className="lg:col-start-2 lg:col-span-3 bg-white h-full shadow-md drop-shadow-lg p-2">
                     <div className='heading flex flex-col md:flex-row justify-between'>
                         <h3 className='text-xl font-medium'>KPS Shanhuala</h3>
                         <h3 className='flex gap-2'>
@@ -85,8 +85,8 @@ const InnerContent = () => {
                     </div>
 
                 </div>
-                {/* div right down */}
-                <div className="lg:col-start-2 lg:col-span-3 lg:row-span-2 bg-white h-full shadow-md drop-shadow-lg p-2">
+                {/* div right down--------------------------------------------- */}
+                <div className="lg:col-start-2 lg:col-span-3 lg:row-span-2 bg-white h-full shadow-md drop-shadow-lg p-2 overflow-x-scroll">
                     <div className='heading flex flex-col md:flex-row justify-between'>
                         <h3 className='text-xl font-medium'>Transactions</h3>
                         <label className="input-group border rounded max-w-2/3 md:w-1/3">
@@ -95,7 +95,7 @@ const InnerContent = () => {
                         </label>
 
                     </div>
-                    <table className="table text-sm mt-5">
+                    <table className="table text-sm mt-5 max-w-screen lg:w-max ">
                         {/* head */}
                         <thead className='uppercase text-base'>
                             <tr className=''>
